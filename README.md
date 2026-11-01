@@ -12,7 +12,7 @@ Website interaktif dan modern untuk pembuatan **Twibbon Haul Ke-10 KH. Abu Chami
    - Efek perayaan (*confetti celebration*) saat twibbon berhasil dibuat.
 
 2. **Preview Gambar Twibbon**:
-   - Menampilkan frame poster `HAUL mbah twibon.png`.
+   - Menampilkan frame poster `revisi-HAUL MBAH ABU CHAMID KE 10.png`.
    - Informasi detail acara haul (tanggal, waktu, lokasi, muballigh, dan live streaming YouTube).
 
 3. **Pilih Foto dari Galeri (1-Click)**:
@@ -25,7 +25,7 @@ Website interaktif dan modern untuk pembuatan **Twibbon Haul Ke-10 KH. Abu Chami
    - **Cermin (Flip)**: Membalik foto selfie.
    - **Reset**: Mengembalikan posisi dan ukuran foto ke default.
 
-5. **Render Resolusi Ultra HD (2160 × 2700 px)**:
+5. **Render Resolusi Ultra HD (3240 × 4050 px)**:
    - Menggabungkan foto pengguna dan frame twibbon asli secara *client-side* dengan kualitas 100% jernih tanpa pecah.
 
 6. **Save & Share**:

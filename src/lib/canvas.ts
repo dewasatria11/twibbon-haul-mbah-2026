@@ -1,15 +1,15 @@
 import type { PhotoTransform } from "@/types/twibbon";
 
-// Exact dimensions of HAUL mbah twibon.png
-export const TWIBBON_WIDTH = 2160;
-export const TWIBBON_HEIGHT = 2700;
+// Exact dimensions of revisi-HAUL MBAH ABU CHAMID KE 10.png (3240x4050)
+export const TWIBBON_WIDTH = 3240;
+export const TWIBBON_HEIGHT = 4050;
 
-// The transparent cutout area in HAUL mbah twibon.png is x: [1047, 2160], y: [0, 2700]
-export const CUTOUT_LEFT = 1047;
-export const CUTOUT_WIDTH = 2160 - 1047; // 1113px
-export const CUTOUT_HEIGHT = 2700;
-export const CUTOUT_CENTER_X = CUTOUT_LEFT + CUTOUT_WIDTH / 2; // 1603.5
-export const CUTOUT_CENTER_Y = 1350;
+// The transparent cutout area in revisi-HAUL MBAH ABU CHAMID KE 10.png is x: [1571, 3240], y: [0, 4050]
+export const CUTOUT_LEFT = 1571;
+export const CUTOUT_WIDTH = 3240 - 1571; // 1669px
+export const CUTOUT_HEIGHT = 4050;
+export const CUTOUT_CENTER_X = CUTOUT_LEFT + CUTOUT_WIDTH / 2; // 2405.5
+export const CUTOUT_CENTER_Y = 2025;
 
 let cachedFrameImage: HTMLImageElement | null = null;
 
@@ -34,7 +34,7 @@ export async function getTwibbonFrame(): Promise<HTMLImageElement> {
     return cachedFrameImage;
   }
   try {
-    const img = await loadImage("/new HAUL mbah twibon.png");
+    const img = await loadImage("/revisi-HAUL MBAH ABU CHAMID KE 10.png");
     cachedFrameImage = img;
     return img;
   } catch {
@@ -62,7 +62,7 @@ export function calculateInitialTransform(userImg: HTMLImageElement): PhotoTrans
 
   return {
     offsetX: CUTOUT_CENTER_X,
-    offsetY: CUTOUT_CENTER_Y - 40, // Slightly above dead-center because footer is at bottom
+    offsetY: CUTOUT_CENTER_Y - 60, // Slightly above dead-center because footer is at bottom
     scale: baseScale,
     baseScale,
     rotation: 0,

@@ -129,7 +129,7 @@ export default function Hero({ onTriggerUpload, onOpenInfo }: HeroProps) {
                 </div>
 
                 <img
-                  src="/new HAUL mbah twibon.png"
+                  src="/revisi-HAUL MBAH ABU CHAMID KE 10.png"
                   alt="Twibbon Haul Mbah 2026"
                   className="relative z-10 h-full w-full object-contain pointer-events-none select-none"
                 />
