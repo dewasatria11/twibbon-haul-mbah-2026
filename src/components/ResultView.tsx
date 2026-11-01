@@ -12,7 +12,8 @@ import {
   Copy,
   Check,
 } from "lucide-react";
-import { downloadImage, shareTwibbon } from "@/lib/share";
+import { downloadImage } from "@/lib/share";
+import { useTwibbonShare, ShareFallbackDialog } from "./TwibbonShare";
 
 interface ResultViewProps {
   resultBlob: Blob;
@@ -32,6 +33,18 @@ export default function ResultView({
 }: ResultViewProps) {
   const [toastMsg, setToastMsg] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+
+  // Hook TwibbonShare dengan alur cerdas (Tier 1 & Tier 2)
+  const { prepare, share, showFallback, dialogProps } = useTwibbonShare({
+    blob: resultBlob,
+    caption: DEFAULT_CAPTION,
+    fileName: "twibbon-haul-mbah-2026.png",
+  });
+
+  // Siapkan file di background secara sinkron agar gesture klik langsung diterima browser
+  useEffect(() => {
+    prepare();
+  }, [resultBlob, prepare]);
 
   useEffect(() => {
     try {
@@ -57,13 +70,9 @@ export default function ResultView({
   };
 
   const handleShare = async () => {
-    const res = await shareTwibbon(
-      resultBlob,
-      "Twibbon Haul Ke-10 KH. Abu Chamid",
-      DEFAULT_CAPTION
-    );
-    if (res.success) {
-      showToast(`✨ ${res.message}`);
+    const res = await share();
+    if (res === "shared") {
+      showToast("✨ Twibbon berhasil dibagikan!");
     }
   };
 
@@ -127,13 +136,22 @@ export default function ResultView({
             <span>Simpan / Unduh Foto (Ultra HD)</span>
           </button>
 
-          <button
-            onClick={handleShare}
-            className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] py-3.5 text-sm font-semibold text-white shadow-card transition-all duration-300 hover:shadow-card-hover active:scale-[0.98]"
-          >
-            <Share2 className="h-4 w-4" />
-            <span>Bagikan ke WhatsApp / Medsos</span>
-          </button>
+          <div className="flex flex-col gap-1">
+            <button
+              onClick={handleShare}
+              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] py-3.5 text-sm font-semibold text-white shadow-card transition-all duration-300 hover:shadow-card-hover active:scale-[0.98]"
+            >
+              <Share2 className="h-4 w-4" />
+              <span>Bagikan ke WhatsApp / Medsos</span>
+            </button>
+            <button
+              type="button"
+              onClick={showFallback}
+              className="text-xs text-stone-500 hover:text-stone-800 underline transition text-center py-1 cursor-pointer"
+            >
+              Gagal membagikan? Coba cara lain
+            </button>
+          </div>
 
           <div className="rounded-2xl border border-stone-200/80 bg-white p-4 shadow-soft">
             <div className="flex items-center justify-between">
@@ -169,6 +187,8 @@ export default function ResultView({
           </div>
         </div>
       </div>
+      {/* Dialog cadangan interaktif jika browser bawaan menolak share file secara native */}
+      <ShareFallbackDialog {...dialogProps} />
     </div>
   );
 }
