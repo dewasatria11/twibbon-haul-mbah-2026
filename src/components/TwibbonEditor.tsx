@@ -179,7 +179,7 @@ export default function TwibbonEditor({
             </button>
           </div>
 
-          <div className="relative w-full max-w-[340px] sm:max-w-[380px] overflow-hidden rounded-3xl border border-stone-200/90 bg-white p-3 shadow-card">
+          <div className="relative w-full max-w-[340px] sm:max-w-[380px] overflow-hidden rounded-3xl border-2 border-emerald-800/40 bg-royal p-3 shadow-card">
             <canvas
               ref={canvasRef}
               width={1080}
@@ -188,7 +188,7 @@ export default function TwibbonEditor({
               onPointerMove={handlePointerMove}
               onPointerUp={handlePointerUp}
               onPointerCancel={handlePointerUp}
-              className="h-auto w-full cursor-grab active:cursor-grabbing block rounded-2xl bg-stone-100"
+              className="h-auto w-full cursor-grab active:cursor-grabbing block rounded-2xl bg-stone-100 ring-1 ring-black/10"
               style={{ touchAction: "none" }}
             />
           </div>
