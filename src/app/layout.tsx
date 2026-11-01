@@ -22,9 +22,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://alikhsanbeji.ponpes.id"),
-  title: "Twibbon Resmi Haul Ke-10 KH. Abu Chamid | Ponpes Al Ikhsan Beji",
+  title: "Twibbon Haul Ke-10 KH. Abu Chamid | Ponpes Al Ikhsan Beji",
   description:
-    "Website pembuatan Twibbon resmi Haul Ke-10 Almarhum Almaghfurlah K.H. Abu Chamid & Silaturrahim Alumni IMAB 2026 Pondok Pesantren Al Ikhsan Beji Banyumas. Upload, sesuaikan foto, dan bagikan dengan mudah.",
+    "Website pembuatan Twibbon Haul Ke-10 Almarhum Almaghfurlah K.H. Abu Chamid & Silaturrahim Alumni IMAB 2026 Pondok Pesantren Al Ikhsan Beji Banyumas. Upload, sesuaikan foto, dan bagikan dengan mudah.",
   keywords: [
     "Twibbon Haul Mbah",
     "Haul KH Abu Chamid",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Pondok Pesantren Al Ikhsan Beji" }],
   openGraph: {
-    title: "Twibbon Resmi Haul Ke-10 KH. Abu Chamid",
+    title: "Twibbon Haul Ke-10 KH. Abu Chamid",
     description: "Buat twibbon Haul Ke-10 KH. Abu Chamid & Silaturrahim Alumni IMAB 2026. Praktis & Kualitas HD.",
     images: ["/twibbon-frame.png"],
     type: "website",

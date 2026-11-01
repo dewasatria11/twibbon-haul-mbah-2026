@@ -30,7 +30,7 @@ export default function Hero({ onTriggerUpload, onOpenInfo }: HeroProps) {
             </h1>
 
             <p className="mx-auto mt-4 max-w-xl text-sm font-normal leading-relaxed text-stone-600 sm:text-base lg:mx-0">
-              Pasang dan sesuaikan foto Anda pada twibbon resmi haul cepat dan mudah.
+              Pasang dan sesuaikan foto Anda pada twibbon haul cepat dan mudah.
             </p>
 
             {/* Date & Location Plain Text */}
@@ -130,7 +130,7 @@ export default function Hero({ onTriggerUpload, onOpenInfo }: HeroProps) {
 
                 <img
                   src="/new HAUL mbah twibon.png"
-                  alt="Twibbon Resmi Haul Mbah 2026"
+                  alt="Twibbon Haul Mbah 2026"
                   className="relative z-10 h-full w-full object-contain pointer-events-none select-none"
                 />
               </div>
@@ -138,7 +138,7 @@ export default function Hero({ onTriggerUpload, onOpenInfo }: HeroProps) {
               {/* Label - Plain text without button */}
               <div className="py-2.5 text-center">
                 <p className="text-xs font-semibold text-stone-700 transition-colors group-hover:text-emerald-900">
-                  Twibbon Resmi Haul Mbah 2026
+                  Twibbon Haul Mbah 2026
                 </p>
               </div>
             </motion.div>

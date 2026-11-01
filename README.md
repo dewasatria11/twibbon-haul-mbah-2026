@@ -1,17 +1,17 @@
 # Website Twibbon Haul Ke-10 KH. Abu Chamid
 
-Website interaktif dan modern untuk pembuatan **Twibbon Resmi Haul Ke-10 KH. Abu Chamid & Silaturrahim Alumni IMAB 2026** di Pondok Pesantren Al Ikhsan Beji, Kedungbanteng, Banyumas.
+Website interaktif dan modern untuk pembuatan **Twibbon Haul Ke-10 KH. Abu Chamid & Silaturrahim Alumni IMAB 2026** di Pondok Pesantren Al Ikhsan Beji, Kedungbanteng, Banyumas.
 
 ---
 
 ## ✨ Fitur Utama
 
-1. **Desain & Animasi Menarik (Soft Neobrutalism)**:
-   - Nuansa warna bersih dengan aksen kuning (`#FFE600`) dan hijau brand (`#1ec295`).
+1. **Desain & Animasi Menarik**:
+   - Nuansa warna bersih, mewah, dan teduh bernuansa pesantren luhur.
    - Animasi transisi halus menggunakan **Framer Motion**.
    - Efek perayaan (*confetti celebration*) saat twibbon berhasil dibuat.
 
-2. **Preview Gambar Twibbon Resmi**:
+2. **Preview Gambar Twibbon**:
    - Menampilkan frame poster `HAUL mbah twibon.png`.
    - Informasi detail acara haul (tanggal, waktu, lokasi, muballigh, dan live streaming YouTube).
 
