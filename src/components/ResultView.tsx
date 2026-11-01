@@ -52,8 +52,8 @@ export default function ResultView({
   };
 
   const handleSave = () => {
-    downloadImage(resultBlob, "twibbon-haul-mbah-kh-abu-chamid.png");
-    showToast("✅ Foto Twibbon berhasil disimpan ke perangkat Anda!");
+    downloadImage(resultBlob, "twibbon-haul-mbah-2026.png");
+    showToast("✅ Foto Twibbon berhasil disimpan ke galeri perangkat!");
   };
 
   const handleShare = async () => {
