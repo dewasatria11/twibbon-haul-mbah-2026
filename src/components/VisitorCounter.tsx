@@ -38,10 +38,10 @@ export default function VisitorCounter() {
   }, []);
 
   return (
-    <div className="flex justify-center px-4 pb-5 pt-3">
+    <div className="flex justify-center pb-2.5">
       <div
-        className="inline-flex items-center gap-2 rounded-full border border-stone-200/90 bg-white/90 px-3.5 py-1.5 text-xs text-stone-600 shadow-sm backdrop-blur-sm transition-all hover:border-stone-300 hover:shadow"
-        title="Jumlah pengunjung Twibbon Haul KH. Abu Chamid"
+        className="inline-flex items-center gap-2 rounded-full border border-stone-200/90 bg-white/95 px-3 py-1 text-[11px] sm:text-xs text-stone-600 shadow-sm backdrop-blur-sm transition-all hover:border-stone-300"
+        title="Total pengunjung website Twibbon Haul KH. Abu Chamid"
       >
         {/* Pulsing Green Indicator */}
         <span className="relative flex h-2 w-2">
@@ -49,24 +49,18 @@ export default function VisitorCounter() {
           <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-600"></span>
         </span>
 
-        {/* Counter Text */}
+        {/* Counter Text: only cumulative total + visitor counter */}
         {stats ? (
           <div className="flex items-center gap-1.5 font-medium">
             <span className="font-bold text-stone-900">
-              {stats.today.toLocaleString("id-ID")}
-            </span>
-            <span className="text-stone-500">visitor counter</span>
-            <span className="text-stone-300">•</span>
-            <span className="font-semibold text-stone-700">
               {stats.total.toLocaleString("id-ID")}
             </span>
+            <span className="text-stone-500">visitor counter</span>
           </div>
         ) : (
           <div className="flex items-center gap-1.5 text-stone-400">
-            <span className="inline-block h-3 w-5 animate-pulse rounded bg-stone-200" />
+            <span className="inline-block h-3 w-6 animate-pulse rounded bg-stone-200" />
             <span>visitor counter</span>
-            <span className="text-stone-300">•</span>
-            <span className="inline-block h-3 w-7 animate-pulse rounded bg-stone-200" />
           </div>
         )}
       </div>
