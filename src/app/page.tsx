@@ -9,6 +9,7 @@ import ResultView from "@/components/ResultView";
 import EventDetailsModal from "@/components/EventDetailsModal";
 import Footer from "@/components/Footer";
 import AudioPlayer from "@/components/AudioPlayer";
+import VisitorCounter from "@/components/VisitorCounter";
 import { AppStep } from "@/types/twibbon";
 import { getTwibbonFrame, loadImage } from "@/lib/canvas";
 
@@ -138,6 +139,8 @@ export default function HomePage() {
       />
 
       <AudioPlayer />
+
+      <VisitorCounter />
 
       <Footer />
     </div>
