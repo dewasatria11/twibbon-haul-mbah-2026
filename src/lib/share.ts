@@ -1,3 +1,5 @@
+import { detectBrowser } from "./browserDetect";
+
 /**
  * Triggers native browser download for a Blob
  */
@@ -17,6 +19,9 @@ export function downloadImage(blob: Blob, filename = "twibbon-haul-mbah-2026.png
  */
 export function canShareFile(file: File): boolean {
   try {
+    const { isBuiltInBrowser } = detectBrowser();
+    if (isBuiltInBrowser) return false;
+
     return (
       typeof navigator !== "undefined" &&
       typeof navigator.share === "function" &&
